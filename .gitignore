@@ -1,0 +1,10 @@
+/*
+!.gitignore
+!/hypr
+!/waybar
+!/starship.toml
+
+!/helix
+/helix/*
+!/helix/config.toml
+!/helix/languages.toml

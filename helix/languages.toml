@@ -1,0 +1,47 @@
+[[language]]
+name = "python"
+auto-format = true
+
+roots = ["pyproject.toml"]
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+config = {} # <- this is the important line
+[[grammar]]
+name = "python"
+source = { git = "https://github.com/tree-sitter/tree-sitter-python", rev = "9e53981ec31b789ee26162ea335de71f02186003" }
+[language.formatter]
+# need to lanch helix from inside the virtual env to work
+command = "black"
+args = [
+"-", # stdin
+"--quiet",
+"--line-length=79",
+]
+
+[[language]]
+name = "html"
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+
+[[language]]
+name = "json"
+formatter = { command = 'prettier', args = ["--parser", "json"] }
+
+[[language]]
+name = "css"
+formatter = { command = 'prettier', args = ["--parser", "css"] }
+
+[[language]]
+name = "javascript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[[language]]
+name = "typescript"
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+# [[language]]
+# name = "angular"
+# scope = "source.angular"
+# roots = ["angular.json"]
+# language-server = { command = "ngserver", args = ["--stdio", "--tsProbeLocations", "$(npm -g root)", "--ngProbeLocations", "$(npm -g root)"] }
+# file-types = ["ts", "html"]
