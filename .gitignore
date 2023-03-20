@@ -2,6 +2,7 @@
 !.gitignore
 !/hypr
 !/waybar
+!/wofi
 !/starship.toml
 
 !/helix
