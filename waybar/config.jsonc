@@ -14,7 +14,7 @@
         // "wlr/workspaces"
     ],
     // "modules-center": ["hyprland/window"],
-    "modules-center": ["custom/quotes"],
+    // "modules-center": ["custom/quotes"],
     "modules-right": [
         // "tray",
         // "custom/updates",
